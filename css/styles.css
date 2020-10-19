@@ -107,6 +107,11 @@ img {
 .modal-list-svg {
   width: 11px;
   height: 11px;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-list-svg:hover {
+  cursor: pointer;
+  fill: var(--accent-color);
 }
 /*========== END COMPONENTS ==========*/
 
@@ -501,6 +506,9 @@ margin-right: 10px;
   margin-left: 93px;
   padding-top: 12px;
 }
+.subscribe-form {
+  display: flex;
+}
 .subscribe-name {
 font-weight: 700;
 font-size: 14px;
@@ -520,6 +528,9 @@ border-radius: 4px;
 padding-left: 16px;
 }
 .btn-submit {
+display: flex;
+align-items: center;
+justify-content: center;
 width: 200px;
 height: 50px; 
 font-weight: 700;
@@ -530,14 +541,15 @@ background-color: var(--accent-color);
 color: var(--secondary-color);
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 border-radius: 4px;
+margin-left: 12px;
 }
 .btn-submit::after {
-  content: "";
-  display: inline-block;   
+  content: "";   
   width: 24px;
   height: 24px;
+  margin-left: 10px;
 }
-.icon-send::after {
+.btn-submit::after {
   background-image: url(../images/footer/send.svg);
 }
 /*========== END FOOTER ==========*/
@@ -595,6 +607,14 @@ resize: none;
 margin-bottom: 20px;
 margin-top: 4px;
 margin-bottom: 20px;
+padding: 12px 16px;
+}
+.modal-form-message::placeholder {
+font-weight: 400;
+font-size: 14px;
+line-height: 1.143;
+letter-spacing: 0.01em;
+color: rgba(117, 117, 117, 0.5);
 }
 .modal-form-svg-icon {
   position: absolute;
@@ -602,7 +622,17 @@ margin-bottom: 20px;
   transform: translateY(-50%);
   left: 12px;
 }
+.modal-form-policy:checked + .check-policy-name::before {
+  background-color: var(--accent-color);
+  background-image: url(../images/checkbox/mark.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
 .check-policy-name {
+display: flex;
+align-items: center;
+justify-content: center;
 font-weight: 400;
 font-size: 14px;
 line-height: 1.714;
@@ -614,11 +644,17 @@ color: var(--description-color);
   width: 16px;
   height: 15px;
   display: inline-block;
-  border: 1px solid var(--title-theme-color);
-  margin-right: 8px;
+  margin-right: 7px;
+  background-image: url(../images/checkbox/frame.svg);
 }
 .check-policy-link {
-  text-decoration-skip-ink: none;
+text-decoration-skip-ink: none;
+font-weight: 400;
+font-size: 14px;
+line-height: 1.714;
+letter-spacing: 0.03em;
+color: var(--accent-color);
+padding-left: 3px;
 }
 .modal-form-btn {
   align-self: flex-start;
@@ -633,8 +669,8 @@ color: var(--description-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   cursor: pointer;
-  margin-top: 30px;
   margin: 0 auto;
+  margin-top: 30px;
 }
 /*========== END MODAL FORM ==========*/
 /*========== PORTFOLIO ==========*/
