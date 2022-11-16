@@ -738,12 +738,8 @@ img {
   background-size: contain;
 }
 
-#check-policy:focus+.check-policy-name::before {
-  background-color: var(--accent-color);
-  background-image: url(../images/checkbox/mark.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+#check-policy:focus:not(:checked)+.check-policy-name::before {
+  background-position: 0 -16px;
 }
 
 .check-policy-name {
@@ -764,6 +760,7 @@ img {
   display: inline-block;
   margin-right: 7px;
   background-image: url(../images/checkbox/frame.svg);
+  fill: var(--title-theme-color);
 }
 
 .check-policy-link {
